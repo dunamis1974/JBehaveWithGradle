@@ -1,8 +1,42 @@
-bin
-target
-build
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
 .gradle
-*.class
-.classpath
-.project
-.settings/
+/build/
+
+!gradle-wrapper.jar
+
+gradle-app.setting
+
+.gradletasknamecache
