@@ -18,6 +18,7 @@ configurations { jbehave }
 
 dependencies {
 	compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+	compile project (':framework')
 	testCompile (
 			[group: 'junit', name: 'junit', version: '4.12'],
 			[group: 'org.jbehave', name: 'jbehave-core', version: '4.1'],

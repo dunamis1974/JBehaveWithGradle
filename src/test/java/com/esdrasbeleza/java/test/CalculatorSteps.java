@@ -6,49 +6,27 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.notNullValue;
 
-import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Then;
-import org.jbehave.core.annotations.When;
-
 import com.esdrasbeleza.java.Calculator;
+import com.esdrasbeleza.java.Medium;
+import org.jbehave.core.annotations.BeforeStories;
+import org.jbehave.core.annotations.Then;
 
 public class CalculatorSteps {
 
-	private Calculator calculator;
-	private int number;
-	private int result;
-	private Exception exception;
-	
-	@Given("a number $number")
-	public void aNumber(int number) {
-		calculator = new Calculator();
-		this.number = number; 
-	}
-	
-	@When("we multiply it by $number")
-	public void multiplyBy(int number) {
-		result = calculator.multiply(this.number, number);
-	}
-	
-	@When("we divide it by $number")
-	public void divideBy(int number) {
-		try {
-			result = calculator.divide(this.number, number);
-		}
-		catch (ArithmeticException e) {
-			exception = e;
-		}
-	}
+	@BeforeStories
+	public void beforeStories() {
+        Medium.calculator = new Calculator();
+    }
 	
 	@Then("the result is $number")
 	public void assertResult(int number) {
-		assertThat(result, equalTo(number));
+		assertThat(Medium.result, equalTo(number));
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Then("we get an error")
 	public void assertException() {
-		assertThat(exception, allOf(notNullValue(), instanceOf(ArithmeticException.class)));
+		assertThat(Medium.exception, allOf(notNullValue(), instanceOf(ArithmeticException.class)));
 	}
 	
 }

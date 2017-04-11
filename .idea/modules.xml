@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JBehaveWithGradle.iml" filepath="$PROJECT_DIR$/.idea/modules/JBehaveWithGradle.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JBehaveWithGradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JBehaveWithGradle_main.iml" group="JBehaveWithGradle" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JBehaveWithGradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JBehaveWithGradle_test.iml" group="JBehaveWithGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework.iml" filepath="$PROJECT_DIR$/.idea/modules/framework.iml" group="framework" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/framework_main.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/framework_main.iml" group="framework" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/framework_test.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/framework_test.iml" group="framework" />
     </modules>
   </component>
 </project>

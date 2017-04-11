@@ -1,0 +1,25 @@
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations { jbehave }
+
+dependencies {
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+    compile group: 'org.jbehave', name: 'jbehave-core', version: '4.1'
+    compile group: 'de.codecentric', name: 'jbehave-junit-runner', version: '1.2.0'
+
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    runtime 'javax.servlet:jstl:1.1.2'
+}
+
+jettyRun.contextPath = ""
